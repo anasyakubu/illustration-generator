@@ -1,6 +1,7 @@
 // Flutterwave inline checkout helper.
 // FlutterwaveCheckout is provided globally by the v3.js script in index.html.
 // Public key is read from Vite env: VITE_FLW_PUBLIC_KEY.
+// import Logo from "../../public/logo.svg"
 
 const FLW_PUBLIC_KEY = import.meta.env.VITE_FLW_PUBLIC_KEY as
   | string
@@ -27,7 +28,7 @@ interface FlwConfig {
   currency: string;
   payment_options: string;
   customer: { email: string; name?: string };
-  customizations: { title: string; description: string };
+  customizations: { title: string; description: string; logo?: string; };
   callback: (res: FlwResponse) => void;
   onclose: () => void;
 }
@@ -76,6 +77,7 @@ export function openUpgradeCheckout(opts: UpgradeOptions): void {
     customizations: {
       title: 'The Illustration Atelier',
       description: `Press upgrade — ${PRO_LIMIT} commissions`,
+      logo: 'https://llustration-generator.netlify.app/logo.svg'
     },
     callback: (res) => {
       const ok =
