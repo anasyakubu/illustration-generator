@@ -36,7 +36,10 @@ export default function ComposePanel({
   onGenerate,
 }: Props) {
   return (
-    <aside className="flex flex-col gap-7">
+    <aside
+      aria-label="Illustration controls"
+      className="flex flex-col gap-7"
+    >
       {/* Prompt */}
       <div>
         <label className="mb-2 flex items-baseline justify-between">

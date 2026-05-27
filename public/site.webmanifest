@@ -1,0 +1,18 @@
+{
+  "name": "The Illustration Atelier",
+  "short_name": "Atelier",
+  "description": "A small press for synthetic pictures. AI illustration generator powered by OpenAI.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4efe6",
+  "theme_color": "#161310",
+  "lang": "en",
+  "categories": ["graphics", "productivity", "design"],
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

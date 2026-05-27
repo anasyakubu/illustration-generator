@@ -10,13 +10,21 @@ export default function Masthead({ used, limit, pro, onUpgrade }: Props) {
   return (
     <header className="border-b border-ink/15">
       <div className="mx-auto flex max-w-[1400px] items-end justify-between px-6 py-5 md:px-10">
-        <div className="flex items-baseline gap-3">
-          <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-vermillion">
-            Est. 2026
-          </span>
-          <h1 className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
-            The Illustration Atelier
-          </h1>
+        <div className="flex items-center gap-3">
+          <img
+            src="/logo.svg"
+            alt=""
+            aria-hidden="true"
+            className="h-10 w-10 md:h-12 md:w-12"
+          />
+          <div className="flex flex-col leading-none">
+            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-vermillion">
+              Est · MMXXVI
+            </span>
+            <h1 className="mt-1 font-display text-2xl font-semibold tracking-tight md:text-3xl">
+              The Illustration Atelier
+            </h1>
+          </div>
         </div>
         <p className="hidden font-body text-sm italic text-sage md:block">
           a small press for synthetic pictures

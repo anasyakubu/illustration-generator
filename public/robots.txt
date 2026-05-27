@@ -1,0 +1,25 @@
+# robots.txt for The Illustration Atelier
+# https://illustration-atelier.com/
+
+User-agent: *
+Allow: /
+
+# Block well-known infrastructure paths
+Disallow: /api/
+Disallow: /.env
+
+# AI crawlers — explicitly allowed; remove these blocks to opt out
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap
+Sitemap: https://illustration-atelier.com/sitemap.xml

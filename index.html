@@ -2,12 +2,224 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#161310" />
+
+    <!-- Canonical & language -->
+    <link rel="canonical" href="https://illustration-atelier.com/" />
+    <link rel="alternate" hreflang="en" href="https://illustration-atelier.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://illustration-atelier.com/" />
+
+    <!-- Primary meta -->
+    <title>The Illustration Atelier — AI Illustration Generator</title>
+    <meta
+      name="title"
+      content="The Illustration Atelier — AI Illustration Generator"
+    />
+    <meta
+      name="description"
+      content="A small press for synthetic pictures. Compose a brief, choose a house style — risograph, ink wash, mid-century, engraving — and commission a fine AI illustration. Powered by OpenAI."
+    />
+    <meta
+      name="keywords"
+      content="AI illustration generator, AI art, OpenAI image generator, risograph generator, ink wash AI, AI editorial illustration, gpt-image-1, text to image, illustration atelier"
+    />
+    <meta name="author" content="Anas Yakubu" />
+    <meta name="creator" content="Anas Yakubu" />
+    <meta name="publisher" content="The Illustration Atelier" />
+    <meta name="application-name" content="The Illustration Atelier" />
+    <meta name="generator" content="Vite + React" />
+
+    <!-- Search engine instructions -->
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <meta name="rating" content="general" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Open Graph (Facebook, LinkedIn, Slack, iMessage, Discord) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Illustration Atelier" />
+    <meta property="og:url" content="https://illustration-atelier.com/" />
+    <meta
+      property="og:title"
+      content="The Illustration Atelier — AI Illustration Generator"
+    />
+    <meta
+      property="og:description"
+      content="A small press for synthetic pictures. Compose a brief, choose a house style, and commission a fine AI illustration."
+    />
+    <meta
+      property="og:image"
+      content="https://illustration-atelier.com/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="The Illustration Atelier logo — a folded paper letter A in cream and vermillion on an ink-black plate."
+    />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://illustration-atelier.com/" />
+    <meta
+      name="twitter:title"
+      content="The Illustration Atelier — AI Illustration Generator"
+    />
+    <meta
+      name="twitter:description"
+      content="A small press for synthetic pictures. Compose a brief, choose a house style, and commission a fine AI illustration."
+    />
+    <meta
+      name="twitter:image"
+      content="https://illustration-atelier.com/og-image.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="The Illustration Atelier logo on an ink-black plate."
+    />
+
+    <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Illustration Atelier</title>
-      <script src="https://checkout.flutterwave.com/v3.js"></script>
+    <link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/favicon.svg" color="#d6451e" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Performance: preconnect to third-party origins we actually hit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.openai.com" />
+    <link rel="preconnect" href="https://checkout.flutterwave.com" />
+    <link rel="dns-prefetch" href="https://api.openai.com" />
+    <link rel="dns-prefetch" href="https://checkout.flutterwave.com" />
+
+    <!-- Third-party scripts (deferred so they don't block render) -->
+    <script src="https://checkout.flutterwave.com/v3.js" defer></script>
+
+    <!-- Structured data — JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "@id": "https://illustration-atelier.com/#webapp",
+            "name": "The Illustration Atelier",
+            "alternateName": "Illustration Atelier",
+            "url": "https://illustration-atelier.com/",
+            "description": "An AI illustration generator. Compose a brief, choose a house style, and commission a fine AI illustration. Powered by OpenAI gpt-image-1.",
+            "applicationCategory": "DesignApplication",
+            "operatingSystem": "Any (web)",
+            "browserRequirements": "Requires JavaScript and a modern browser.",
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Complimentary",
+                "price": "0",
+                "priceCurrency": "USD",
+                "description": "3 free commissions per session."
+              },
+              {
+                "@type": "Offer",
+                "name": "Patron's Upgrade",
+                "price": "2000",
+                "priceCurrency": "NGN",
+                "description": "Raises quota to 10 commissions per session."
+              }
+            ],
+            "featureList": [
+              "Text-to-image generation via OpenAI gpt-image-1",
+              "Seven curated illustration house styles",
+              "Three plate formats and three quality tiers",
+              "Session archive and PNG download",
+              "Flutterwave-powered patronage upgrade"
+            ],
+            "image": "https://illustration-atelier.com/og-image.png",
+            "screenshot": "https://illustration-atelier.com/og-image.png",
+            "author": { "@id": "https://illustration-atelier.com/#person" },
+            "publisher": { "@id": "https://illustration-atelier.com/#org" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://illustration-atelier.com/#org",
+            "name": "The Illustration Atelier",
+            "url": "https://illustration-atelier.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://illustration-atelier.com/logo.svg",
+              "width": 512,
+              "height": 512
+            },
+            "founder": { "@id": "https://illustration-atelier.com/#person" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://illustration-atelier.com/#person",
+            "name": "Anas Yakubu",
+            "jobTitle": "Lead Frontend Engineer"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://illustration-atelier.com/#website",
+            "url": "https://illustration-atelier.com/",
+            "name": "The Illustration Atelier",
+            "description": "A small press for synthetic pictures.",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://illustration-atelier.com/#org" }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://illustration-atelier.com/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is The Illustration Atelier?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "An AI illustration generator that turns a written brief into a finished plate using OpenAI's gpt-image-1 model, with curated house styles ranging from risograph to engraving."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How many illustrations can I generate for free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Three commissions per session. A one-time Flutterwave upgrade raises the quota to ten."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I download the illustrations I generate?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Every plate is available as a high-resolution PNG download from the viewer."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
+    <!-- SEO + accessibility: visible content for crawlers that don't run JS,
+         hidden visually once React mounts. -->
+    <noscript>
+      <h1>The Illustration Atelier</h1>
+      <p>
+        An AI illustration generator powered by OpenAI. Compose a brief, choose
+        a house style — risograph, ink wash, mid-century, engraving, blueprint,
+        gouache — and commission a fine illustration.
+      </p>
+      <p>This application requires JavaScript to run.</p>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

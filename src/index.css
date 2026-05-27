@@ -25,6 +25,38 @@ body {
 
 input::placeholder, textarea::placeholder { color: #8a9079; }
 
+/* A11y — screen-reader-only utility */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+.sr-only.focusable:focus,
+.sr-only.focusable:focus-visible {
+  position: fixed;
+  top: 12px; left: 12px;
+  width: auto; height: auto;
+  padding: 10px 16px;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  background: #161310;
+  color: #f4efe6;
+  z-index: 100;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+}
+
+/* Focus rings — consistent and brand-coloured */
+:focus-visible {
+  outline: 2px solid #d6451e;
+  outline-offset: 2px;
+}
+
 /* Themed scrollbars — cross-browser */
 * {
   scrollbar-width: thin;

@@ -37,8 +37,16 @@ function Empty() {
 
 export default function PlateCanvas({ loading, error, current }: Props) {
   return (
-    <div className="flex flex-col">
-      <div className="relative min-h-[460px] flex-1 border border-ink/20 bg-[#ece5d8]">
+    <section
+      aria-label="Illustration plate"
+      className="flex flex-col"
+    >
+      <h2 className="sr-only">Plate viewer</h2>
+      <div
+        className="relative min-h-[460px] flex-1 border border-ink/20 bg-[#ece5d8]"
+        aria-live="polite"
+        aria-busy={loading}
+      >
         {/* corner registration marks */}
         {['top-2 left-2', 'top-2 right-2', 'bottom-2 left-2', 'bottom-2 right-2'].map(
           (pos) => (
@@ -97,6 +105,6 @@ export default function PlateCanvas({ loading, error, current }: Props) {
           </a>
         </div>
       )}
-    </div>
+    </section>
   );
 }

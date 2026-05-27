@@ -12,6 +12,7 @@ import {
   type Quality,
 } from './lib/openai';
 import { FREE_LIMIT, PRO_LIMIT } from './lib/flutterwave';
+import { useSeo } from './lib/seo';
 
 export default function App() {
   const [prompt, setPrompt] = useState('');
@@ -28,6 +29,16 @@ export default function App() {
   const [used, setUsed] = useState(0);
   const [pro, setPro] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+
+  // Runtime SEO — reflect the current plate in <title> when one is open
+  useSeo({
+    title: current
+      ? `“${current.prompt.slice(0, 50)}” — The Illustration Atelier`
+      : 'The Illustration Atelier — AI Illustration Generator',
+    description: current
+      ? `${current.prompt} — rendered in ${current.styleName} style by The Illustration Atelier.`
+      : 'A small press for synthetic pictures. Compose a brief, choose a house style, and commission a fine AI illustration. Powered by OpenAI.',
+  });
 
   const limit = pro ? PRO_LIMIT : FREE_LIMIT;
   const quotaReached = used >= limit;
@@ -78,6 +89,9 @@ export default function App() {
 
   return (
     <div className="grain min-h-full">
+      <a href="#main" className="sr-only focusable">
+        Skip to main content
+      </a>
       <Masthead
         used={used}
         limit={limit}
@@ -98,7 +112,7 @@ export default function App() {
         </div>
       )}
 
-      <main className="mx-auto max-w-[1400px] px-6 py-8 md:px-10 md:py-12">
+      <main id="main" className="mx-auto max-w-[1400px] px-6 py-8 md:px-10 md:py-12">
         <div className="grid gap-10 lg:grid-cols-[360px_1fr]">
           <div className="flex flex-col gap-5">
             <ComposePanel
