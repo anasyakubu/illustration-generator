@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="The Illustration Atelier">
+  <title>The Illustration Atelier</title>
+  <desc>A folded letter A in cream paper and vermillion on an ink-black rounded plate.</desc>
+
+  <rect x="0" y="0" width="512" height="512" rx="96" fill="#161310"/>
+  <rect x="28" y="28" width="456" height="456" rx="76" fill="none" stroke="#f4efe6" stroke-width="1.5" opacity="0.18"/>
+
+  <!-- The folded A. Apex (256,128). Base spans 122 → 390 at y=394. Crossbar at y=296. -->
+  <g>
+    <!-- Right plane — paper -->
+    <polygon points="256,128 390,394 256,394" fill="#f4efe6"/>
+    <!-- Left plane — vermillion (inside of fold) -->
+    <polygon points="256,128 122,394 256,394" fill="#d6451e"/>
+    <!-- Fold crease — hairline ink down the centre -->
+    <line x1="256" y1="128" x2="256" y2="394" stroke="#161310" stroke-width="2.2" opacity="0.5" stroke-linecap="round"/>
+    <!-- Crossbar — sits about 63% down the form, properly centred -->
+    <rect x="192" y="290" width="128" height="14" fill="#161310" opacity="0.92"/>
+  </g>
+
+  <circle cx="430" cy="430" r="10" fill="#d6451e"/>
+</svg>

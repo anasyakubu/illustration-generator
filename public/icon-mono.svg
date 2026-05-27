@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="The Illustration Atelier — monochrome">
+  <title>The Illustration Atelier — monochrome</title>
+  <desc>Monochrome variant of the folded A logo, ink on paper.</desc>
+
+  <rect x="0" y="0" width="512" height="512" rx="96" fill="#f4efe6"/>
+  <rect x="28" y="28" width="456" height="456" rx="76" fill="none" stroke="#161310" stroke-width="1.5" opacity="0.5"/>
+
+  <g>
+    <polygon points="256,128 390,394 256,394" fill="#161310"/>
+    <polygon points="256,128 122,394 256,394" fill="#161310" opacity="0.55"/>
+    <line x1="256" y1="128" x2="256" y2="394" stroke="#f4efe6" stroke-width="2.2" opacity="0.9" stroke-linecap="round"/>
+    <rect x="192" y="290" width="128" height="14" fill="#f4efe6"/>
+  </g>
+
+  <circle cx="430" cy="430" r="10" fill="#161310"/>
+</svg>
